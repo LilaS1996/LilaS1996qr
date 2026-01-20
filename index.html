@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator - Tech Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">
+                <span class="title-glow">QR</span><span class="title-tech">TECH</span>
+            </h1>
+            <p class="subtitle">Generate QR Codes with Futuristic Precision</p>
+        </header>
+
+        <main class="main">
+            <div class="input-section">
+                <div class="input-group">
+                    <input type="url" id="urlInput" placeholder="https://example.com" required>
+                    <button id="generateBtn" class="generate-btn">
+                        <span>GENERATE</span>
+                        <div class="btn-glow"></div>
+                    </button>
+                </div>
+                <div class="input-hint">Enter any URL to create instant QR code</div>
+            </div>
+
+            <div class="qr-section">
+                <div id="qrContainer" class="qr-container">
+                    <div class="qr-placeholder">
+                        <div class="scan-icon"></div>
+                        <p>QR Code will appear here</p>
+                    </div>
+                </div>
+                <div class="qr-actions">
+                    <button id="downloadBtn" class="action-btn download-btn" disabled>
+                        <svg viewBox="0 0 24 24" class="icon">
+                            <path d="M12 15l-5-5h3V8h4v2h3l-5 5z"/>
+                        </svg>
+                        Download PNG
+                    </button>
+                    <button id="copyBtn" class="action-btn copy-btn" disabled>
+                        <svg viewBox="0 0 24 24" class="icon">
+                            <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+                        </svg>
+                        Copy to Clipboard
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <div class="particles"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
